@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static SEO Blog - Automated Niche Monetization</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A fully static, high-performance, and SEO-optimized blog directory designed for automated niche monetization, programmatic publishing, and affiliate conversions.">
+  <meta name="keywords" content="SEO, Static Site, Niche Blog, Programmatic SEO, Passive Income, Affiliate Monetization">
+  <meta name="author" content="Alex Mercer">
+  <link rel="canonical" href="https://nicheblog.example.com/">
+  
+  <!-- JSON-LD Schema Markup for Blog / Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Static SEO Blog",
+    "url": "https://nicheblog.example.com/",
+    "description": "High-performance static SEO blog engineered for automated affiliate and ad income.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nicheblog.example.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="./index.css">
+  
+  <!-- Tailwind CSS Engine for dynamic preview compilation and production rendering -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- Minimal Announcement Bar -->
+  <div class="bg-slate-900 text-slate-100 px-6 py-2 text-center text-xs font-mono tracking-wider flex items-center justify-center gap-4">
+    <span>🚀 Programmatic static engine running at 100% performance</span>
+    <span class="hidden md:inline text-slate-500">|</span>
+    <span class="hidden md:inline text-indigo-400">Perfect Core Web Vitals (Speed Index: 0.2s)</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-6 py-4 shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="group flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-indigo-600 text-white font-bold text-base shadow-sm group-hover:bg-indigo-700 transition-colors">S</span>
+        <div class="flex flex-col">
+          <span class="font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors text-base leading-none">Static SEO Blog</span>
+          <span class="text-[10px] font-mono text-slate-400 mt-1">Niche Monetization Blueprint</span>
+        </div>
+      </a>
+      
+      <div class="flex items-center gap-6">
+        <div id="date-display" class="hidden sm:inline text-xs font-mono text-slate-500">
+          <!-- Dynamically populated current local date -->
+        </div>
+        <a href="#newsletter" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-sm">
+          Subscribe
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Editorial Board -->
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-12 border-b border-slate-200/80">
+    <div class="max-w-3xl">
+      <span class="px-2.5 py-1 text-xs font-semibold tracking-widest text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-full uppercase font-mono mb-4 inline-block">Programmatic Engine</span>
+      
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+        The Static Revenue Blueprint
+      </h1>
+      
+      <p class="text-xl sm:text-2xl text-slate-600 font-serif leading-relaxed mb-8">
+        How we configure ultra-fast HTML templates, automated sitemaps, and programmatic keyword networks to capture organic search traffic with zero operating overhead.
+      </p>
+
+      <!-- Key Performance Metrics Banner -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl bg-white border border-slate-200 p-4 rounded-2xl shadow-sm">
+        <div class="text-center p-2 border-r border-slate-100">
+          <div class="text-2xl font-black text-emerald-600 font-mono">100/100</div>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">PageSpeed Score</div>
+        </div>
+        <div class="text-center p-2 md:border-r md:border-slate-100">
+          <div class="text-2xl font-black text-slate-900 font-mono">$0.00</div>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Hosting Overhead</div>
+        </div>
+        <div class="text-center p-2 border-r border-slate-100">
+          <div class="text-2xl font-black text-slate-900 font-mono">100%</div>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Organic Reach</div>
+        </div>
+        <div class="text-center p-2">
+          <div class="text-2xl font-black text-indigo-600 font-mono">Passive</div>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Monetization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Display Bar -->
+  <section class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-none">
+      <button onclick="filterCategory('All')" id="btn-cat-All" class="px-4 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-all cursor-pointer whitespace-nowrap shadow-sm">
+        All Articles
+      </button>
+      <button onclick="filterCategory('Strategy')" id="btn-cat-Strategy" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-all cursor-pointer whitespace-nowrap">
+        Strategy
+      </button>
+      <button onclick="filterCategory('Research')" id="btn-cat-Research" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-all cursor-pointer whitespace-nowrap">
+        Research
+      </button>
+      <button onclick="filterCategory('SEO')" id="btn-cat-SEO" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-all cursor-pointer whitespace-nowrap">
+        SEO
+      </button>
+    </div>
+    
+    <div class="text-xs font-mono text-slate-400 flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span id="scan-status">Scanning sitemap.xml...</span>
+    </div>
+  </section>
+
+  <!-- Dynamic Post Board / Main Area -->
+  <main class="max-w-6xl mx-auto px-6 pb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      
+      <!-- Primary Articles Grid (Occupies 2 Cols on Desktop) -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- Skeleton Loading Loader -->
+        <div id="skeleton-loader" class="space-y-6">
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 animate-pulse">
+            <div class="h-48 bg-slate-200 rounded-xl mb-6"></div>
+            <div class="h-6 bg-slate-200 rounded-md w-3/4 mb-3"></div>
+            <div class="h-4 bg-slate-200 rounded-md w-full mb-2"></div>
+            <div class="h-4 bg-slate-200 rounded-md w-2/3"></div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 animate-pulse">
+            <div class="h-6 bg-slate-200 rounded-md w-1/2 mb-3"></div>
+            <div class="h-4 bg-slate-200 rounded-md w-full mb-2"></div>
+            <div class="h-4 bg-slate-200 rounded-md w-5/6"></div>
+          </div>
+        </div>
+
+        <!-- Rendered Articles Grid Container -->
+        <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 hidden">
+          <!-- Dynamic cards injected via Javascript -->
+        </div>
+
+        <!-- Fallback Empty State (Hidden by default) -->
+        <div id="empty-state" class="hidden bg-white border border-slate-200 rounded-2xl p-12 text-center shadow-sm">
+          <div class="w-16 h-16 bg-indigo-50 rounded-full flex items-center justify-center mx-auto mb-4 text-indigo-600 font-bold text-2xl">
+            📬
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">No Articles Listed in Sitemap</h3>
+          <p class="text-slate-500 max-w-sm mx-auto text-sm leading-relaxed mb-6">
+            The homepage scanning engine completed successfully, but couldn't locate any blog posts in the <code>sitemap.xml</code> file.
+          </p>
+          <button onclick="window.location.reload()" class="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm cursor-pointer">
+            Retry Scan
+          </button>
+        </div>
+
+        <!-- Fallback Error State (Hidden by default) -->
+        <div id="error-state" class="hidden bg-red-50/50 border border-red-200 rounded-2xl p-8 text-center text-red-800">
+          <h3 class="font-bold mb-2">Sitemap Scan Failed</h3>
+          <p class="text-xs text-red-600 max-w-md mx-auto leading-relaxed">
+            Ensure that <code>sitemap.xml</code> exists in the root folder and that your browser supports fetching local XML files (or that you are running a local dev server).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Column (Occupies 1 Col on Desktop) -->
+      <aside class="space-y-8">
+        
+        <!-- Native Monetized Placement Box -->
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 text-slate-100 rounded-2xl p-6 shadow-md border border-slate-800/80">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2 py-0.5 text-[9px] font-mono font-bold uppercase tracking-wider text-indigo-400 bg-indigo-400/10 rounded border border-indigo-400/20">Sponsor Spotlight</span>
+            <span class="text-[9px] font-mono text-slate-500">Sponsored Link</span>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-white">Automate Your SEO Analytics</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Scrape keywords, track SERP ranks, and write auto-optimized niche outlines using our dedicated API. Secure 500 free queries.
+          </p>
+          <a href="https://example.com/affiliate-link" target="_blank" rel="noopener noreferrer" class="block text-center w-full px-4 py-2.5 bg-indigo-600 text-white rounded-xl text-xs font-bold hover:bg-indigo-500 transition-colors shadow-sm">
+            Activate Free Trial →
+          </a>
+        </div>
+
+        <!-- About Author Board -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <h3 class="text-sm font-bold uppercase text-slate-900 tracking-wider mb-3">About the Author</h3>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center border border-indigo-100 text-sm">AM</div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">Alex Mercer</h4>
+              <p class="text-[10px] text-slate-400 font-mono">Static & SEO Engineer</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Alex designs systems that parse data, capture search impressions, and create clean, high-speed static interfaces. No heavy frameworks, no database bottlenecks.
+          </p>
+        </div>
+
+        <!-- Profitable Affiliates Grid -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <h3 class="text-sm font-bold uppercase text-slate-900 tracking-wider mb-4">Highly Monetizable Tools</h3>
+          <div class="space-y-3">
+            <a href="https://example.com/host" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors border border-slate-100">
+              <div>
+                <h4 class="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Vercel Hosting</h4>
+                <p class="text-[9px] text-slate-400">Zero cost global static CDN</p>
+              </div>
+              <span class="text-xs text-slate-400 group-hover:text-slate-600">Free</span>
+            </a>
+            <a href="https://example.com/seo" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors border border-slate-100">
+              <div>
+                <h4 class="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">RankMath AI</h4>
+                <p class="text-[9px] text-slate-400">Programmatic schema builder</p>
+              </div>
+              <span class="text-xs text-indigo-600 font-bold">20% Off</span>
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Educational Integration Panel (Automated Python Script Blueprint) -->
+  <section class="bg-slate-100 border-t border-b border-slate-200 py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-6 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2 block">Python Script Automation Blueprint</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">How to Auto-Publish Articles</h2>
+          <p class="text-slate-600 mt-2 text-sm">
+            This website is pre-configured to automatically recognize and render any HTML files saved in the <code>/posts/</code> folder, provided they are declared in your <code>sitemap.xml</code>.
+          </p>
+        </div>
+        <button onclick="togglePythonCode()" id="code-toggle-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-mono font-bold transition-all whitespace-nowrap shadow-sm cursor-pointer">
+          Show Publisher Script ↓
+        </button>
+      </div>
+
+      <!-- Expandable Python Code Snippet -->
+      <div id="python-code-container" class="hidden transition-all duration-300">
+        <div class="bg-slate-950 text-slate-200 rounded-2xl overflow-hidden shadow-lg border border-slate-800">
+          <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">publisher.py</span>
+            <button onclick="copyPythonCode()" class="text-xs font-mono text-indigo-400 hover:text-indigo-300 cursor-pointer">Copy Code</button>
+          </div>
+          <pre class="p-6 overflow-x-auto text-xs font-mono leading-relaxed text-emerald-400 max-h-[400px]">
+<span class="text-stone-500"># publisher.py - Automated static article generator</span>
+<span class="text-blue-400">import</span> os
+<span class="text-blue-400">import</span> datetime
+<span class="text-blue-400">import</span> xml.etree.ElementTree <span class="text-blue-400">as</span> ET
+
+<span class="text-stone-400"># 1. Define meta attributes for the automated article</span>
+slug = <span class="text-amber-300">"automated-article-example"</span>
+title = <span class="text-amber-300">"How Programmatic Scripts Scale Affiliate Income"</span>
+description = <span class="text-amber-300">"Learn the backend mechanics of programmatic content production."</span>
+category = <span class="text-amber-300">"Strategy"</span>
+reading_time = <span class="text-amber-300">"5 min read"</span>
+cover_image = <span class="text-amber-300">"https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800"</span>
+publish_date = datetime.date.today().isoformat()
+
+<span class="text-stone-400"># 2. Complete HTML post template</span>
+html_template = <span class="text-amber-300">f"""&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{title} - Static SEO Blog&lt;/title&gt;
+  &lt;meta name="description" content="{description}"&gt;
+  &lt;meta name="publish-date" content="{publish_date}"&gt;
+  &lt;meta name="category" content="{category}"&gt;
+  &lt;meta name="reading-time" content="{reading_time}"&gt;
+  &lt;meta name="cover-image" content="{cover_image}"&gt;
+  &lt;link rel="stylesheet" href="../index.css"&gt;
+  &lt;script src="https://unpkg.com/@tailwindcss/browser@4"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="bg-[#faf9f6] text-stone-800"&gt;
+  &lt;!-- Content body generated --&gt;
+&lt;/body&gt;
+&lt;/html&gt;"""</span>
+
+<span class="text-stone-400"># 3. Write HTML file into /posts/</span>
+file_path = <span class="text-amber-300">f"posts/{slug}.html"</span>
+with open(file_path, <span class="text-amber-300">"w"</span>) <span class="text-blue-400">as</span> f:
+    f.write(html_template)
+print(<span class="text-amber-300">f"Article written: {file_path}"</span>)
+
+<span class="text-stone-400"># 4. Automatically update sitemap.xml in root</span>
+sitemap_path = <span class="text-amber-300">"sitemap.xml"</span>
+tree = ET.parse(sitemap_path)
+root = tree.getroot()
+
+<span class="text-stone-400"># Append new url element</span>
+url_el = ET.SubElement(root, <span class="text-amber-300">"url"</span>)
+loc_el = ET.SubElement(url_el, <span class="text-amber-300">"loc"</span>)
+loc_el.text = <span class="text-amber-300">f"https://nicheblog.example.com/posts/{slug}.html"</span>
+lastmod_el = ET.SubElement(url_el, <span class="text-amber-300">"lastmod"</span>)
+lastmod_el.text = publish_date
+
+tree.write(sitemap_path, encoding=<span class="text-amber-300">"UTF-8"</span>, xml_declaration=<span class="text-blue-400">True</span>)
+print(<span class="text-amber-300">"sitemap.xml successfully updated!"</span>)</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="bg-slate-900 text-slate-100 py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 block">Newsletter</span>
+      <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-white">Scale Your Static Passive Income</h3>
+      <p class="text-slate-300 mb-8 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+        Get weekly analytical case studies, programmatic automation scripts, and low-competition high-value keywords delivered directly to your inbox.
+      </p>
+      
+      <div id="newsletter-form-container">
+        <form id="subscribe-form" class="flex flex-col sm:flex-row items-stretch gap-3 max-w-md mx-auto">
+          <input id="newsletter-email" type="email" placeholder="Enter your email address" required class="flex-1 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+          <button type="submit" class="px-6 py-3 font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-colors text-sm shadow-sm whitespace-nowrap cursor-pointer">
+            Subscribe Free
+          </button>
+        </form>
+      </div>
+      
+      <div id="success-message" class="hidden max-w-md mx-auto p-5 bg-slate-800 border border-indigo-500/30 rounded-xl text-indigo-400 text-sm font-medium">
+        🎉 Thank you! You've been successfully subscribed. We have stored your registration locally. Keep an eye out for our next update!
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-950 text-slate-500 text-xs py-12 text-center border-t border-slate-900 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold text-xs">S</span>
+        <span class="font-bold text-slate-300">Static SEO Blog</span>
+      </div>
+      <p class="text-[11px]">© 2026 Static SEO Blog. All rights reserved. Built with 100% static HTML and CSS.</p>
+      <div class="flex items-center gap-4">
+        <a href="./sitemap.xml" target="_blank" class="hover:text-slate-300 transition-colors">Sitemap XML</a>
+        <span>•</span>
+        <a href="#newsletter" class="hover:text-slate-300 transition-colors">Newsletter</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Logic for Dynamic Article Scanning, Rendering, Filtering, and Date Population -->
+  <script>
+    // Global variable to hold loaded posts
+    let allPosts = [];
+
+    // Set current date inside navigation bar
+    const dateDisplay = document.getElementById('date-display');
+    if (dateDisplay) {
+      const today = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+      dateDisplay.textContent = today.toLocaleDateString('en-US', options).toUpperCase();
+    }
+
+    // Toggle Python Code Expandable block
+    function togglePythonCode() {
+      const el = document.getElementById('python-code-container');
+      const btn = document.getElementById('code-toggle-btn');
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        btn.textContent = 'Hide Publisher Script ↑';
+      } else {
+        el.classList.add('hidden');
+        btn.textContent = 'Show Publisher Script ↓';
+      }
+    }
+
+    // Copy Python publisher.py block to clipboard
+    function copyPythonCode() {
+      const codeText = `import os
+import datetime
+import xml.etree.ElementTree as ET
+
+slug = "automated-article-example"
+title = "How Programmatic Scripts Scale Affiliate Income"
+description = "Learn the backend mechanics of programmatic content production."
+category = "Strategy"
+reading_time = "5 min read"
+cover_image = "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800"
+publish_date = datetime.date.today().isoformat()
+
+html_template = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{title} - Static SEO Blog</title>
+  <meta name="description" content="{description}">
+  <meta name="publish-date" content="{publish_date}">
+  <meta name="category" content="{category}">
+  <meta name="reading-time" content="{reading_time}">
+  <meta name="cover-image" content="{cover_image}">
+  <link rel="stylesheet" href="../index.css">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#faf9f6] text-stone-800">
+</body>
+</html>"""
+
+file_path = f"posts/{slug}.html"
+with open(file_path, "w") as f:
+    f.write(html_template)
+
+sitemap_path = "sitemap.xml"
+tree = ET.parse(sitemap_path)
+root = tree.getroot()
+
+url_el = ET.SubElement(root, "url")
+loc_el = ET.SubElement(url_el, "loc")
+loc_el.text = f"https://nicheblog.example.com/posts/{slug}.html"
+lastmod_el = ET.SubElement(url_el, "lastmod")
+lastmod_el.text = publish_date
+
+tree.write(sitemap_path, encoding="UTF-8", xml_declaration=True)`;
+
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert("Python script copied successfully to clipboard!");
+      }).catch(err => {
+        console.error("Failed to copy text: ", err);
+      });
+    }
+
+    // Main Scanning and Dynamic Fetching Logic
+    async function scanAndRenderBlog() {
+      const grid = document.getElementById('articles-grid');
+      const skeleton = document.getElementById('skeleton-loader');
+      const emptyState = document.getElementById('empty-state');
+      const errorState = document.getElementById('error-state');
+      const statusText = document.getElementById('scan-status');
+
+      try {
+        // Fetch sitemap.xml
+        const response = await fetch('./sitemap.xml');
+        if (!response.ok) throw new Error('Sitemap response was not successful.');
+        const xmlText = await response.text();
+
+        // Parse XML
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const locElements = xmlDoc.getElementsByTagName('loc');
+
+        const articleUrls = [];
+        Array.from(locElements).forEach(locEl => {
+          const locText = locEl.textContent.trim();
+          
+          // Match anything containing /posts/ and ending in .html
+          const match = locText.match(/posts\/[a-zA-Z0-9_-]+\.html/);
+          if (match) {
+            articleUrls.push('./' + match[0]);
+          }
+        });
+
+        if (articleUrls.length === 0) {
+          skeleton.classList.add('hidden');
+          emptyState.classList.remove('hidden');
+          statusText.textContent = 'No articles found';
+          return;
+        }
+
+        // Fetch each HTML file and extract its meta information
+        const postPromises = articleUrls.map(async (url) => {
+          try {
+            const postResponse = await fetch(url);
+            if (!postResponse.ok) return null;
+            const postHtml = await postResponse.text();
+            
+            const postDoc = parser.parseFromString(postHtml, 'text/html');
+            const title = postDoc.querySelector('title')?.textContent.replace(' - Static SEO Blog', '') || 'Untitled Post';
+            const description = postDoc.querySelector('meta[name="description"]')?.getAttribute('content') || 'An automated static niche publication.';
+            const author = postDoc.querySelector('meta[name="author"]')?.getAttribute('content') || 'Alex Mercer';
+            const date = postDoc.querySelector('meta[name="publish-date"]')?.getAttribute('content') || '2026-07-17';
+            const category = postDoc.querySelector('meta[name="category"]')?.getAttribute('content') || 'Strategy';
+            const readingTime = postDoc.querySelector('meta[name="reading-time"]')?.getAttribute('content') || '4 min read';
+            const coverImage = postDoc.querySelector('meta[name="cover-image"]')?.getAttribute('content') || 'https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=800';
+
+            return {
+              url,
+              title,
+              description,
+              author,
+              date,
+              category,
+              readingTime,
+              coverImage
+            };
+          } catch (e) {
+            console.error('Error fetching post:', url, e);
+            return null;
+          }
+        });
+
+        const resolvedPosts = await Promise.all(postPromises);
+        allPosts = resolvedPosts.filter(post => post !== null);
+
+        // Sort posts descending by publish-date
+        allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Render posts
+        renderPostCards(allPosts);
+        statusText.textContent = `Scanned successfully (${allPosts.length} posts found)`;
+
+      } catch (err) {
+        console.error('Sitemap fetch failed: ', err);
+        skeleton.classList.add('hidden');
+        errorState.classList.remove('hidden');
+        statusText.textContent = 'Scan failed';
+      }
+    }
+
+    // Rendering cards in DOM
+    function renderPostCards(posts) {
+      const grid = document.getElementById('articles-grid');
+      const skeleton = document.getElementById('skeleton-loader');
+      const emptyState = document.getElementById('empty-state');
+
+      grid.innerHTML = '';
+      skeleton.classList.add('hidden');
+
+      if (posts.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.classList.remove('hidden');
+
+      posts.forEach(post => {
+        const dateFormatted = new Date(post.date).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric'
+        });
+
+        const card = document.createElement('article');
+        card.className = 'bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover-card flex flex-col h-full';
+        card.innerHTML = `
+          <div class="aspect-video w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+            <img src="${post.coverImage}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase bg-indigo-50 text-indigo-700 border border-indigo-200/50 rounded">${post.category}</span>
+                <span class="text-[11px] font-mono text-slate-400">${dateFormatted}</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2 hover:text-indigo-600 transition-colors">
+                <a href="${post.url}">${post.title}</a>
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed font-serif line-clamp-3 mb-6">
+                ${post.description}
+              </p>
+            </div>
+            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-500 uppercase border border-slate-200">
+                  ${post.author.split(' ').map(n => n[0]).join('')}
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600">${post.author}</span>
+              </div>
+              <span class="text-[10px] font-mono text-slate-400">${post.readingTime}</span>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Posts by Category
+    function filterCategory(category) {
+      // Toggle button states
+      const categories = ['All', 'Strategy', 'Research', 'SEO'];
+      categories.forEach(cat => {
+        const btn = document.getElementById(`btn-cat-${cat}`);
+        if (cat === category) {
+          btn.className = "px-4 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-all cursor-pointer whitespace-nowrap shadow-sm";
+        } else {
+          btn.className = "px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-all cursor-pointer whitespace-nowrap";
+        }
+      });
+
+      if (category === 'All') {
+        renderPostCards(allPosts);
+      } else {
+        const filtered = allPosts.filter(p => p.category === category);
+        renderPostCards(filtered);
+      }
+    }
+
+    // Handle newsletter subscription
+    document.getElementById('subscribe-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      
+      // Save subscription state in localStorage
+      localStorage.setItem('subscribed_user', email);
+      
+      document.getElementById('newsletter-form-container').classList.add('hidden');
+      document.getElementById('success-message').classList.remove('hidden');
+    });
+
+    // Check if user already subscribed
+    window.addEventListener('DOMContentLoaded', () => {
+      const isSubscribed = localStorage.getItem('subscribed_user');
+      if (isSubscribed) {
+        document.getElementById('newsletter-form-container').classList.add('hidden');
+        document.getElementById('success-message').classList.remove('hidden');
+      }
+      
+      // Trigger Sitemap Scanner
+      scanAndRenderBlog();
+    });
+  </script>
+</body>
+</html>

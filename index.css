@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base style resets and customizations */
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom micro-interactions and transitions */
+.hover-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.08);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
