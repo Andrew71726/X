@@ -1,27 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nicheblog.example.com/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
+    </url>
   <url>
     <loc>https://nicheblog.example.com/posts/getting-started-with-automated-monetization.html</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://nicheblog.example.com/posts/how-to-find-profitable-niches.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://nicheblog.example.com/posts/seo-optimization-tips-for-static-sites.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-</urlset>
+    </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/programmatic-seo-scaling-passive-affiliate-income-with-tens-of-thousands-of-long-tail-pages.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
+  </urlset>
