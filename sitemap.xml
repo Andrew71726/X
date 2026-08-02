@@ -66,4 +66,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/secure-static-sites-eliminating-sql-injection-database-exploits-and-brute-force-cms-hacks.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
