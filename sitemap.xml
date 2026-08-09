@@ -90,4 +90,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/edge-side-affiliate-monetization-using-cloudflare-workers-to-inject-dynamic-pricing-into-programmatic-static-sites.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
