@@ -102,4 +102,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/cloudflare-workers-for-static-sites-building-database-free-affiliate-link-cloaking-and-dynamic-redirection-at-the-edge.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
