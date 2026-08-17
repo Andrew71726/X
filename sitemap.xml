@@ -114,4 +114,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/edge-rendered-dynamic-affiliate-pricing-building-real-time-api-price-comparison-blocks-on-pure-static-html-sites.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
