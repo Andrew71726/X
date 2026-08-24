@@ -138,4 +138,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/edge-calculated-dynamic-affiliate-pricing-injecting-real-time-product-data-into-static-html-via-cloudflare-workers.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
