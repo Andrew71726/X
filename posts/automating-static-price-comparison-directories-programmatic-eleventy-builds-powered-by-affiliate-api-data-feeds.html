@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automating Static Price Comparison Directories: Programmatic Eleventy Builds Powered by Affiliate API Data Feeds - Static SEO Blog</title>
+  <meta name="description" content="Discover how to build a high-performance, automated price comparison engine using Eleventy, unified affiliate APIs, and scheduled GitHub Actions workflows.">
+  <meta name="author" content="Alex Mercer">
+  <meta name="publish-date" content="2026-09-11">
+  <meta name="category" content="Automation">
+  <meta name="reading-time" content="12 min read">
+  <meta name="cover-image" content="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80">
+  
+  <!-- Tailwind CSS compiler link -->
+  <link rel="stylesheet" href="../index.css">
+  <!-- Tailwind CDN for direct/standalone viewing support -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-6 py-4 shadow-sm">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="group flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold text-sm shadow-sm group-hover:bg-indigo-700 transition-colors">S</span>
+        <span class="font-bold tracking-tight text-slate-800 group-hover:text-indigo-600 transition-colors">Static SEO Blog</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">All Articles</a>
+        <a href="#newsletter" class="px-4 py-1.5 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all shadow-sm">Subscribe</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="max-w-3xl mx-auto px-6 pt-12 pb-8">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="px-2.5 py-1 text-xs font-semibold tracking-wide text-indigo-700 bg-indigo-50 border border-indigo-100/80 rounded-full uppercase">Automation</span>
+      <span class="text-sm text-slate-500 font-mono">September 11, 2026</span>
+    </div>
+    
+    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+      Automating Static Price Comparison Directories: Programmatic Eleventy Builds Powered by Affiliate API Data Feeds
+    </h1>
+    
+    <p class="text-xl text-slate-600 font-serif leading-relaxed mb-8">
+      Discover how to build a high-performance, automated price comparison engine using Eleventy, unified affiliate APIs, and scheduled GitHub Actions workflows.
+    </p>
+
+    <!-- Author & Meta Info -->
+    <div class="flex items-center gap-4 border-y border-slate-200 py-4">
+      <div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden flex items-center justify-center font-bold text-slate-600 border border-slate-200">
+        AM
+      </div>
+      <div>
+        <div class="text-sm font-bold text-slate-900">Alex Mercer</div>
+        <div class="text-xs text-slate-500 flex items-center gap-2">
+          <span>12 min read</span>
+          <span>•</span>
+          <span>Niche Researcher</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Image -->
+  <figure class="max-w-4xl mx-auto px-6 mb-12">
+    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-md">
+      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80" alt="Automating Static Price Comparison Directories: Programmatic Eleventy Builds Powered by Affiliate API Data Feeds" class="w-full h-full object-cover">
+    </div>
+    <figcaption class="text-center text-xs text-stone-400 mt-3 font-mono">
+      Automation Authority Series: Citations, data-backed proof, and technical blueprints.
+    </figcaption>
+  </figure>
+
+  <!-- Article Content -->
+  <main class="max-w-3xl mx-auto px-6 pb-20">
+    <article class="markdown-content">
+      <p>The landscape of affiliate marketing and programmatic search engine optimization (pSEO) has undergone a structural paradigm shift. Historically, dynamic, database-driven Content Management Systems (CMS) like WordPress dominated the directory and price comparison niches. However, as web performance metrics have transitioned from optional optimization goals to core search engine ranking criteria, the limitations of dynamic rendering have become painfully clear.</p>
+<p>Legacy dynamic sites suffer from unpredictable Time to First Byte (TTFB), vulnerability to SQL injections, and escalating hosting costs under heavy traffic spikes. In contrast, leveraging a <strong>programmatic static site generator</strong> like Eleventy (11ty) allows developers to build massive, scale-resilient, and lightning-fast <strong>automated price comparison engines</strong>. By transforming raw <strong>JSON to static HTML</strong>, publishers can unlock unmatched speed, rock-solid security, and near-zero hosting costs, optimizing both user experience and search engine visibility.</p>
+<hr />
+<h2>The Architecture of a Programmatic Static Directory</h2>
+<p>To build a highly competitive <strong>Eleventy affiliate site</strong> that scales to tens of thousands of pages, you must separate the data ingestion layer from the presentation layer. Rather than querying a database at the moment a user requests a page, dynamic data is fetched, normalized, and compiled into static HTML files during the build process.</p>
+<p>This architecture relies on three core components:</p>
+<ol>
+<li><strong>The Ingestion Layer:</strong> Custom ingestion scripts fetch data from multiple affiliate network APIs (e.g., Amazon Product Advertising API, Impact Radius, ShareASale, CJ Affiliate) and normalize differing schemas into a unified, lightweight JSON format.</li>
+<li><strong>The Build Engine (Eleventy):</strong> Eleventy processes the unified JSON data files located in the global <code>_data</code> directory. Using Eleventy's powerful pagination system, the engine programmatically generates individual product pages, category directories, and comparison matrices.</li>
+<li><strong>The Deployment Pipeline (CI/CD):</strong> Scheduled workflows (e.g., GitHub Actions, GitLab CI/CD) trigger automated builds at regular intervals (e.g., every 6, 12, or 24 hours) to fetch updated pricing, stock availability, and new product offerings, pushing the fresh static assets directly to a global Content Delivery Network (CDN) like Cloudflare Pages, Vercel, or Netlify.</li>
+</ol>
+<pre class="codehilite"><code>+-----------------------+      +-------------------------+      +-------------------------+
+|  Affiliate APIs       | ---&gt; | Ingestion &amp;             | ---&gt; | Eleventy Build Engine   |
+|  (Amazon, Impact, CJ) |      | Normalization Script    |      | (Global JSON Data)      |
++-----------------------+      +-------------------------+      +-------------------------+
+                                                                             |
+                                                                             v
++-----------------------+      +-------------------------+      +-------------------------+
+| Global Edge CDN       | &lt;--- | Automated Build Pipeline| &lt;--- | Generated Static HTML   |
+| (Cloudflare, Vercel)  |      | (GitHub Actions Cron)   |      | (Optimized Pages)       |
++-----------------------+      +-------------------------+      +-------------------------+
+</code></pre>
+
+<h3>The Performance Imperative</h3>
+<p>The business case for static site monetization is deeply rooted in performance engineering. Research shows a direct correlation between speed and conversion rates. In a landmark study on web latency, Kohavi et al. (2013) demonstrated that even a 100-millisecond delay in page load time can decrease conversion rates by up to 1%. Furthermore, Google's Core Web Vitals update transformed page-load metrics—specifically Largest Contentful Paint (LCP) and Interaction to Next Paint (INP)—into explicit ranking signals.</p>
+<p>By serving pre-rendered HTML files directly from edge servers, a static comparison directory achieves near-instantaneous TTFB (typically sub-50ms), guaranteeing optimal Core Web Vitals scores. This technical efficiency directly translates to improved crawl budgets, faster indexing, and higher organic rankings.</p>
+<hr />
+<h2>Data Normalization: Fetching and Merging Affiliate Feeds</h2>
+<p>The primary technical challenge when building an automated price comparison engine is normalizing disparate data streams. Different affiliate networks return highly inconsistent payloads. A standardized data pipeline must abstract these variations, returning a clean, unified array of products with consistent keys for identification, image assets, pricing, and affiliate deep links.</p>
+<p>Below is a highly educational Node.js script designed to run inside Eleventy's global data system (<code>src/_data/products.js</code>). This script fetches raw JSON feeds from multiple mock affiliate APIs, normalizes their pricing structures, deduplicates products by Universal Product Code (UPC) or European Article Number (EAN), and exposes a clean dataset directly to Eleventy's template engine.</p>
+<pre class="codehilite"><code class="language-javascript">// src/_data/products.js
+const axios = require('axios');
+
+// Mock API Endpoints for demonstration purposes
+const API_FEEDS = {
+  merchantA: 'https://api.merchant-a.com/v1/products?category=tech',
+  merchantB: 'https://api.merchant-b.com/v2/feeds/electronics'
+};
+
+async function fetchMerchantA() {
+  try {
+    // In production, configure proper authentication headers
+    const response = await axios.get(API_FEEDS.merchantA, { timeout: 10000 });
+    return response.data.items.map(item =&gt; ({
+      id: `m-a-${item.sku}`,
+      title: item.product_name,
+      upc: item.barcode,
+      brand: item.manufacturer,
+      price: parseFloat(item.sale_price),
+      currency: item.currency_code || 'USD',
+      imageUrl: item.media.primary_image_url,
+      affiliateUrl: item.tracking_url,
+      merchantName: 'Merchant A',
+      inStock: item.inventory_count &gt; 0
+    }));
+  } catch (error) {
+    console.error('Error fetching Merchant A feed:', error.message);
+    return [];
+  }
+}
+
+async function fetchMerchantB() {
+  try {
+    const response = await axios.get(API_FEEDS.merchantB, { timeout: 10000 });
+    return response.data.products.map(prod =&gt; ({
+      id: `m-b-${prod.id}`,
+      title: prod.title,
+      upc: prod.upc_code,
+      brand: prod.brand_name,
+      price: parseFloat(prod.current_price),
+      currency: 'USD',
+      imageUrl: prod.image_thumb_lg,
+      affiliateUrl: prod.deep_link_url,
+      merchantName: 'Merchant B',
+      inStock: prod.availability === 'in_stock'
+    }));
+  } catch (error) {
+    console.error('Error fetching Merchant B feed:', error.message);
+    return [];
+  }
+}
+
+module.exports = async function() {
+  console.log('Initiating programmatic affiliate feed aggregation...');
+
+  const [feedA, feedB] = await Promise.all([
+    fetchMerchantA(),
+    fetchMerchantB()
+  ]);
+
+  const rawProducts = [...feedA, ...feedB];
+  const consolidatedProducts = {};
+
+  // Group and compare prices by UPC
+  rawProducts.forEach(product =&gt; {
+    if (!product.upc) return; // Skip items without a unique identifier
+
+    if (!consolidatedProducts[product.upc]) {
+      consolidatedProducts[product.upc] = {
+        upc: product.upc,
+        title: product.title,
+        brand: product.brand,
+        imageUrl: product.imageUrl,
+        offers: []
+      };
+    }
+
+    consolidatedProducts[product.upc].offers.push({
+      merchant: product.merchantName,
+      price: product.price,
+      currency: product.currency,
+      url: product.affiliateUrl,
+      inStock: product.inStock
+    });
+  });
+
+  // Convert grouped object back to array and sort offers by price (ascending)
+  return Object.values(consolidatedProducts).map(product =&gt; {
+    product.offers.sort((a, b) =&gt; a.price - b.price);
+    product.lowestPrice = product.offers[0]?.price || 0;
+    product.slug = product.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)+/g, '');
+    return product;
+  });
+};
+</code></pre>
+
+<p>This architecture guarantees that the build process is fed a clean, unified array of products. Each product contains an array of <code>offers</code> sorted programmatically by price. If Merchant B lowers their price below Merchant A, the array sorts itself automatically during the build, dynamically updating the "Best Deal" badge on the static HTML output.</p>
+<hr />
+<h2>Programmatic Routing and Static Generation in Eleventy</h2>
+<p>With the normalized data exposed globally via <code>_data/products.js</code>, you can use Eleventy's dynamic template generation capabilities. Eleventy can read a single template file and compile thousands of unique pages based on the length of the data array.</p>
+<h3>The Product Template with Schema Markup</h3>
+<p>To maximize search engine visibility, every static product page must feature robust schema markup. Google's Search Quality Rater Guidelines (2024) emphasize the critical role of search engine trust, especially for websites offering commercial advice or product recommendations. Providing transparent aggregate offer schemas helps crawl bots understand that your directory serves as a reliable, objective utility.</p>
+<p>Here is an Eleventy layout template (<code>src/products/detail.njk</code>) written in Nunjucks. It loops over the globally resolved <code>products</code> array, assigns a unique slug-based permalink to each product, renders a comparison table, and injects a valid <code>Product</code> and <code>AggregateOffer</code> JSON-LD schema.</p>
+<pre class="codehilite"><code class="language-html">---
+pagination:
+  data: products
+  size: 1
+  alias: product
+permalink: &quot;products/{{ product.slug }}/index.html&quot;
+layout: &quot;base.njk&quot;
+---
+
+&lt;article class=&quot;product-container&quot;&gt;
+  &lt;header class=&quot;product-header&quot;&gt;
+    &lt;h1&gt;Compare Prices for {{ product.title }}&lt;/h1&gt;
+    &lt;p class=&quot;brand-tag&quot;&gt;Brand: &lt;strong&gt;{{ product.brand }}&lt;/strong&gt;&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;product-layout&quot;&gt;
+    &lt;div class=&quot;product-image&quot;&gt;
+      &lt;img src=&quot;{{ product.imageUrl }}&quot; alt=&quot;{{ product.title }}&quot; loading=&quot;lazy&quot; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;offers-panel&quot;&gt;
+      &lt;h2&gt;Available Deals&lt;/h2&gt;
+      &lt;table class=&quot;comparison-table&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Merchant&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Status&lt;/th&gt;
+            &lt;th&gt;Action&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          {% for offer in product.offers %}
+          &lt;tr class=&quot;{% if loop.first %}best-deal{% endif %}&quot;&gt;
+            &lt;td&gt;{{ offer.merchant }}&lt;/td&gt;
+            &lt;td class=&quot;price-cell&quot;&gt;${{ offer.price.toFixed(2) }}&lt;/td&gt;
+            &lt;td&gt;
+              {% if offer.inStock %}
+              &lt;span class=&quot;badge stock-yes&quot;&gt;In Stock&lt;/span&gt;
+              {% else %}
+              &lt;span class=&quot;badge stock-no&quot;&gt;Out of Stock&lt;/span&gt;
+              {% endif %}
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;a href=&quot;{{ offer.url }}&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot; class=&quot;cta-button&quot;&gt;
+                {% if loop.first %}Buy Best Deal{% else %}Go to Store{% endif %}
+              &lt;/a&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          {% endfor %}
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+{# Structured Data Injection #}
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org/&quot;,
+  &quot;@type&quot;: &quot;Product&quot;,
+  &quot;name&quot;: &quot;{{ product.title | escape }}&quot;,
+  &quot;image&quot;: [&quot;{{ product.imageUrl }}&quot;],
+  &quot;brand&quot;: {
+    &quot;@type&quot;: &quot;Brand&quot;,
+    &quot;name&quot;: &quot;{{ product.brand | escape }}&quot;
+  },
+  &quot;offers&quot;: {
+    &quot;@type&quot;: &quot;AggregateOffer&quot;,
+    &quot;priceCurrency&quot;: &quot;USD&quot;,
+    &quot;lowPrice&quot;: &quot;{{ product.lowestPrice }}&quot;,
+    &quot;highPrice&quot;: &quot;{{ product.offers[product.offers.length - 1].price }}&quot;,
+    &quot;offerCount&quot;: &quot;{{ product.offers.length }}&quot;,
+    &quot;offers&quot;: [
+      {% for offer in product.offers %}
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;price&quot;: &quot;{{ offer.price }}&quot;,
+        &quot;priceCurrency&quot;: &quot;{{ offer.currency }}&quot;,
+        &quot;seller&quot;: {
+          &quot;@type&quot;: &quot;Organization&quot;,
+          &quot;name&quot;: &quot;{{ offer.merchant | escape }}&quot;
+        },
+        &quot;url&quot;: &quot;{{ offer.url }}&quot;,
+        &quot;availability&quot;: &quot;{% if offer.inStock %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}&quot;
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+}
+&lt;/script&gt;
+</code></pre>
+
+<hr />
+<h2>Automating the Pipeline with GitHub Actions</h2>
+<p>A static price comparison engine is only as good as its data freshness. To ensure your prices remain accurate and in sync with merchant feeds without manual intervention, you must automate the compilation phase. </p>
+<p>By designing a workflow triggered by both cron schedules and repository dispatches (webhooks), you can automate builds at structured intervals. The following GitHub Actions configuration workflow file (<code>.github/workflows/deploy.yml</code>) handles the process. It installs dependencies, executes the dynamic build pipeline, and deploys the generated static assets to Cloudflare Pages.</p>
+<pre class="codehilite"><code class="language-yaml">name: Scheduled Programmatic Directory Rebuild
+
+on:
+  schedule:
+    # Trigger rebuild every 12 hours (at 00:00 and 12:00 UTC)
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+    # Allows manual triggering of the pipeline via the GitHub UI
+  repository_dispatch:
+    # Allows merchant APIs to trigger rebuilds via webhooks when inventory changes
+    types: [price_update]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-cache: 'npm'
+          node-version: '20'
+
+      - name: Install Project Dependencies
+        run: npm ci
+
+      - name: Execute Static Site Generation
+        run: npm run build
+        env:
+          MERCHANT_A_API_KEY: ${{ secrets.MERCHANT_A_API_KEY }}
+          MERCHANT_B_API_KEY: ${{ secrets.MERCHANT_B_API_KEY }}
+          NODE_ENV: production
+
+      - name: Deploy Compiled HTML to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'price-comparison-directory'
+          directory: '_site'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+</code></pre>
+
+<hr />
+<h2>Scaling and Monetization Strategy</h2>
+<p>Implementing a static directory system dramatically shifts how you approach <strong>static site monetization</strong>. High-performance Jamstack sites require virtually zero server maintenance, eliminating database query failures and scaling issues. However, scaling a programmatic site to 100,000+ pages introduces critical SEO and architecture challenges that require careful planning.</p>
+<h3>Mitigating Thin Content and AI Crawl Flags</h3>
+<p>Modern search engines are increasingly sophisticated at detecting thin, programmatic pages that offer no unique value beyond raw API data. To maintain search authority, your programmatic directory must add value. This is a core pillar of Google's Search Quality Rater Guidelines (Google, 2024), which demand high E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness).</p>
+<p>To differentiate your programmatic site from lower-quality directories, consider implementing these automated value-adds:</p>
+<ul>
+<li><strong>Algorithmic Review Aggregation:</strong> Pull review sentiments from API payloads and dynamically calculate a standardized "Directory Score" using a custom normalization formula.</li>
+<li><strong>Automated Price History Charts:</strong> Store historic pricing data in a lightweight database (such as Supabase or a dynamic JSON repository) and render static SVG trend charts during the build phase.</li>
+<li><strong>Semantic Internal Linking:</strong> Programmatically create contextual links between related categories or items (e.g., "Users who compared this item also looked at...") based on shared product characteristics and taxonomy tagging.</li>
+</ul>
+<h3>Incremental Builds at High Volume</h3>
+<p>If your directory grows to cover hundreds of thousands of products, building the entire site from scratch on every run can become inefficient. To maintain fast build times, you can implement <strong>Incremental Builds</strong>. </p>
+<p>Eleventy offers advanced plugins and configurations (such as caching fetched assets and utilizing Eleventy's internal programmatic caches) to only rebuild pages with active data modifications. Cloudflare's Edge network can also run lightweight dynamic workers alongside your static files to serve real-time price updates or user-generated reviews, creating a hybrid static-dynamic experience.</p>
+<hr />
+<h2>Academic References &amp; Citations</h2>
+<ul>
+<li>Biørn-Hansen, A., Grønli, T. M., &amp; Ghinea, G. (2020). Jamstack: The Next Steps for Web Development and Architecture. <em>In Proceedings of the 22nd International Conference on Enterprise Information Systems (ICEIS)</em>, 2, 411-420. <a href="https://doi.org/10.5220/0009415604110420">https://doi.org/10.5220/0009415604110420</a></li>
+<li>Google LLC. (2024). <em>Search Quality Rater Guidelines</em>. Google Search Central. <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf">https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf</a></li>
+<li>Kohavi, R., Deng, A., Frasca, B., Walker, T., Xu, Y., &amp; Bosworth, Z. (2013). Online Controlled Experiments at Large Scale. <em>In Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '13)</em>, 1168–1176. ACM Digital Library. <a href="https://doi.org/10.1145/2487575.2488217">https://doi.org/10.1145/2487575.2488217</a></li>
+</ul>
+    </article>
+
+    <!-- Social Share & Return -->
+    <div class="flex flex-col sm:flex-row items-center justify-between border-t border-slate-200 mt-12 pt-8 gap-4">
+      <a href="../index.html" class="flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors">
+        ← Back to Homepage
+      </a>
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-slate-400 font-mono">Share:</span>
+        <button onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href), '_blank')" class="p-1.5 rounded-md hover:bg-slate-200 text-slate-600 transition-colors cursor-pointer">
+          Share on X
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="bg-slate-900 text-slate-100 py-16 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 block">Newsletter</span>
+      <h3 class="text-3xl font-extrabold tracking-tight mb-4">Build Your Static Income Engine</h3>
+      <p class="text-slate-300 mb-8 max-w-lg mx-auto">
+        Join 10,000+ developers receiving weekly case studies, automated script blueprints, and profitable niche keyword ideas.
+      </p>
+      
+      <div id="newsletter-form-container">
+        <form id="subscribe-form" class="flex flex-col sm:flex-row items-stretch gap-3 max-w-md mx-auto">
+          <input type="email" placeholder="Enter your email" required class="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+          <button type="submit" class="px-6 py-3 font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors text-sm shadow-sm cursor-pointer">
+            Subscribe Free
+          </button>
+        </form>
+      </div>
+      
+      <div id="success-message" class="hidden max-w-md mx-auto p-4 bg-slate-800 border border-indigo-500/30 rounded-lg text-indigo-400 text-sm font-medium">
+        🎉 Thank you! You've been successfully subscribed.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-slate-900">
+    <p>© 2026 Static SEO Blog. All rights reserved.</p>
+    <p class="mt-2 text-slate-700">Lightweight • Fast • Highly Monetizable</p>
+  </footer>
+
+  <script>
+    // Handle newsletter subscription
+    document.getElementById('subscribe-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('subscribe-form').classList.add('hidden');
+      document.getElementById('success-message').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
