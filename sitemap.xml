@@ -258,4 +258,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/airtable-to-eleventy-automating-programmatic-alternative-to-software-review-sites-for-high-ticket-affiliate-commissions.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
