@@ -276,4 +276,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     </url>
+  <url>
+    <loc>https://nicheblog.example.com/posts/dynamic-price-comparison-widgets-for-jamstack-injecting-live-affiliate-api-data-into-static-html-build-pipelines.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    </url>
   </urlset>
